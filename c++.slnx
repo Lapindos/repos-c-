@@ -1,7 +1,22 @@
 <Solution>
   <Configurations>
+    <BuildType Name="01" />
+    <BuildType Name="02" />
+    <BuildType Name="03" />
+    <BuildType Name="04" />
+    <BuildType Name="05" />
+    <BuildType Name="06" />
+    <BuildType Name="07" />
+    <BuildType Name="08" />
+    <BuildType Name="09" />
+    <BuildType Name="10" />
+    <BuildType Name="11" />
+    <BuildType Name="12" />
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="c++/c++.vcxproj" Id="9f8bdc8e-76c1-4f30-ad10-66b66261b974" />
+  <Project Path="c++/c++.vcxproj" Id="9f8bdc8e-76c1-4f30-ad10-66b66261b974">
+    <Platform Solution="*|x64" Project="x64" />
+    <Platform Solution="*|x86" Project="Win32" />
+  </Project>
 </Solution>

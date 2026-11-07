@@ -1,22 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
-    <ProjectConfiguration Include="Debug|Win32">
-      <Configuration>Debug</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Release|Win32">
-      <Configuration>Release</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Debug|x64">
-      <Configuration>Debug</Configuration>
-      <Platform>x64</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Release|x64">
-      <Configuration>Release</Configuration>
-      <Platform>x64</Platform>
-    </ProjectConfiguration>
+    <ProjectConfiguration Include="01|Win32"><Configuration>01</Configuration><Platform>Win32</Platform></ProjectConfiguration>
+    <ProjectConfiguration Include="02|Win32"><Configuration>02</Configuration><Platform>Win32</Platform></ProjectConfiguration>
+    <ProjectConfiguration Include="03|Win32"><Configuration>03</Configuration><Platform>Win32</Platform></ProjectConfiguration>
+    <ProjectConfiguration Include="04|Win32"><Configuration>04</Configuration><Platform>Win32</Platform></ProjectConfiguration>
+    <ProjectConfiguration Include="05|Win32"><Configuration>05</Configuration><Platform>Win32</Platform></ProjectConfiguration>
+    <ProjectConfiguration Include="06|Win32"><Configuration>06</Configuration><Platform>Win32</Platform></ProjectConfiguration>
+    <ProjectConfiguration Include="07|Win32"><Configuration>07</Configuration><Platform>Win32</Platform></ProjectConfiguration>
+    <ProjectConfiguration Include="08|Win32"><Configuration>08</Configuration><Platform>Win32</Platform></ProjectConfiguration>
+    <ProjectConfiguration Include="09|Win32"><Configuration>09</Configuration><Platform>Win32</Platform></ProjectConfiguration>
+    <ProjectConfiguration Include="10|Win32"><Configuration>10</Configuration><Platform>Win32</Platform></ProjectConfiguration>
+    <ProjectConfiguration Include="11|Win32"><Configuration>11</Configuration><Platform>Win32</Platform></ProjectConfiguration>
+    <ProjectConfiguration Include="12|Win32"><Configuration>12</Configuration><Platform>Win32</Platform></ProjectConfiguration>
+    <ProjectConfiguration Include="01|x64"><Configuration>01</Configuration><Platform>x64</Platform></ProjectConfiguration>
+    <ProjectConfiguration Include="02|x64"><Configuration>02</Configuration><Platform>x64</Platform></ProjectConfiguration>
+    <ProjectConfiguration Include="03|x64"><Configuration>03</Configuration><Platform>x64</Platform></ProjectConfiguration>
+    <ProjectConfiguration Include="04|x64"><Configuration>04</Configuration><Platform>x64</Platform></ProjectConfiguration>
+    <ProjectConfiguration Include="05|x64"><Configuration>05</Configuration><Platform>x64</Platform></ProjectConfiguration>
+    <ProjectConfiguration Include="06|x64"><Configuration>06</Configuration><Platform>x64</Platform></ProjectConfiguration>
+    <ProjectConfiguration Include="07|x64"><Configuration>07</Configuration><Platform>x64</Platform></ProjectConfiguration>
+    <ProjectConfiguration Include="08|x64"><Configuration>08</Configuration><Platform>x64</Platform></ProjectConfiguration>
+    <ProjectConfiguration Include="09|x64"><Configuration>09</Configuration><Platform>x64</Platform></ProjectConfiguration>
+    <ProjectConfiguration Include="10|x64"><Configuration>10</Configuration><Platform>x64</Platform></ProjectConfiguration>
+    <ProjectConfiguration Include="11|x64"><Configuration>11</Configuration><Platform>x64</Platform></ProjectConfiguration>
+    <ProjectConfiguration Include="12|x64"><Configuration>12</Configuration><Platform>x64</Platform></ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>18.0</VCProjectVersion>
@@ -26,30 +34,10 @@
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+  <PropertyGroup Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v145</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v145</PlatformToolset>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v145</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v145</PlatformToolset>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
@@ -57,163 +45,65 @@
   </ImportGroup>
   <ImportGroup Label="Shared">
   </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+  <ImportGroup Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+  <PropertyGroup>
+    <TargetName>task$(Configuration)</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Optimization>Disabled</Optimization>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalOptions>/source-charset:utf-8 /execution-charset:.1251 %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions Condition="'$(Platform)'=='Win32'">WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Platform)'!='Win32'">_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
-    <Manifest>
-      <EnableSegmentHeap>true</EnableSegmentHeap>
-    </Manifest>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp20</LanguageStandard>
-    </ClCompile>
-    <Link>
-      <SubSystem>Console</SubSystem>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-    </Link>
-    <Manifest>
-      <EnableSegmentHeap>true</EnableSegmentHeap>
-    </Manifest>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp20</LanguageStandard>
-    </ClCompile>
-    <Link>
-      <SubSystem>Console</SubSystem>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-    </Link>
-    <Manifest>
-      <EnableSegmentHeap>true</EnableSegmentHeap>
-    </Manifest>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp20</LanguageStandard>
-    </ClCompile>
-    <Link>
-      <SubSystem>Console</SubSystem>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-    </Link>
-    <Manifest>
-      <EnableSegmentHeap>true</EnableSegmentHeap>
-    </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="c++.cpp" />
-    <ClCompile Include="tasks\01.cpp">
-      <ExcludedFromBuild>true</ExcludedFromBuild>
+    <ClCompile Include="pracktika\practika06.11\01.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)'!='01'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="tasks\02.cpp">
-      <ExcludedFromBuild>true</ExcludedFromBuild>
+    <ClCompile Include="pracktika\practika06.11\02.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)'!='02'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="tasks\03.cpp">
-      <ExcludedFromBuild>true</ExcludedFromBuild>
+    <ClCompile Include="pracktika\practika06.11\03.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)'!='03'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="tasks\04.cpp">
-      <ExcludedFromBuild>true</ExcludedFromBuild>
+    <ClCompile Include="pracktika\practika06.11\04.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)'!='04'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="tasks\05.cpp">
-      <ExcludedFromBuild>true</ExcludedFromBuild>
+    <ClCompile Include="pracktika\practika06.11\05.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)'!='05'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="tasks\06.cpp">
-      <ExcludedFromBuild>true</ExcludedFromBuild>
+    <ClCompile Include="pracktika\practika06.11\06.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)'!='06'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="tasks\07.cpp">
-      <ExcludedFromBuild>true</ExcludedFromBuild>
+    <ClCompile Include="pracktika\practika06.11\07.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)'!='07'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="tasks\08.cpp">
-      <ExcludedFromBuild>true</ExcludedFromBuild>
+    <ClCompile Include="pracktika\practika06.11\08.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)'!='08'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="tasks\09.cpp">
-      <ExcludedFromBuild>true</ExcludedFromBuild>
+    <ClCompile Include="pracktika\practika06.11\09.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)'!='09'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="tasks\10.cpp">
-      <ExcludedFromBuild>true</ExcludedFromBuild>
+    <ClCompile Include="pracktika\practika06.11\10.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)'!='10'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="tasks\11.cpp">
-      <ExcludedFromBuild>true</ExcludedFromBuild>
+    <ClCompile Include="pracktika\practika06.11\11.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)'!='11'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="tasks\12.cpp">
-      <ExcludedFromBuild>true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="tasks\13.cpp">
-      <ExcludedFromBuild>true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="tasks\14.cpp">
-      <ExcludedFromBuild>true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="tasks\15.cpp">
-      <ExcludedFromBuild>true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="tasks\16.cpp">
-      <ExcludedFromBuild>true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="tasks\17.cpp">
-      <ExcludedFromBuild>true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="tasks\18.cpp">
-      <ExcludedFromBuild>true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="tasks\19.cpp">
-      <ExcludedFromBuild>true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="tasks\20.cpp">
-      <ExcludedFromBuild>true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="tasks\21.cpp">
-      <ExcludedFromBuild>true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="tasks\22.cpp">
-      <ExcludedFromBuild>true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="tasks\23.cpp">
-      <ExcludedFromBuild>true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="tasks\24.cpp">
-      <ExcludedFromBuild>true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="tasks\25.cpp">
-      <ExcludedFromBuild>true</ExcludedFromBuild>
+    <ClCompile Include="pracktika\practika06.11\12.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)'!='12'">true</ExcludedFromBuild>
     </ClCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
